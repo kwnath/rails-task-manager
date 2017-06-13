@@ -1,0 +1,9 @@
+<h1>To Do List</h1>
+  <ol>
+<% @tasks.each do |task| %>
+    <li>
+      <p><%= link_to task.task, task_path(task) %> [<%= task.done == 1 ? 'x':'' %>]</p>
+    </li>
+<% end %>
+  </ol>
+<p><%= link_to 'Create TASK', new_task_path %></p>

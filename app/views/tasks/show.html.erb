@@ -1,0 +1,15 @@
+<h1> Task: <%= @task.task %></h1>
+<p> Details: <%= @task.details %></p>
+<p>Creation date: <%= @task.created_at %></p>
+<p>Last updated: <%= @task.updated_at %></p>
+<p><% if @task.done == 1%>
+  <strong>Done</strong>
+  <% else %>
+    <p>Not Done</p>
+  <% end %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_task_path(@task) %>
+  <%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>

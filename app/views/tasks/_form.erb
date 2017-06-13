@@ -1,0 +1,9 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+  <%= f.label :details %>
+  <%= f.text_area :details %>
+  <%= f.label :done %>
+  <%= f.select :done, ([['yes', 1], ['no', 2]]) %>
+  <%= f.submit %>
+<% end %>
